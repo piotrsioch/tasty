@@ -1,8 +1,11 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {AuthService} from "../../authentication/auth.service";
+import {Router} from "@angular/router";
 
 export interface FormConfig {
   title: string;
   buttonText: string;
+  isSignIn: boolean;
   fields: {
     label: string;
     name: string;
@@ -18,4 +21,27 @@ export interface FormConfig {
 })
 export class AuthFormComponent {
   @Input() config!: FormConfig;
+  @Output() formSubmit = new EventEmitter<any>();
+  formData: any = {};
+
+  constructor(private authService: AuthService, private router: Router) {}
+
+  onSubmit() {
+    if(this.config.isSignIn) {
+      this.authService.login(this.formData.email, this.formData.password)
+        .subscribe({
+          next: res => {
+            localStorage.setItem('token', res.token);
+            this.router.navigate(['/dashboard'])
+          },
+          error: (error) => console.log(error)
+        });
+    } else if (!this.config.isSignIn) {
+      this.authService.register(this.formData.name, this.formData.email, this.formData.password)
+        .subscribe({
+          next: () => console.log("Registered successfully")
+        });
+    }
+  }
+
 }
