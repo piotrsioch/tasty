@@ -1,6 +1,6 @@
 import { RouterModule, Routes } from "@angular/router";
 import { NgModule } from "@angular/core";
-import {AuthGuardService} from "./modules/authentication/auth-guard.service";
+import {AuthGuardService} from "./modules/authentication/service/auth-guard.service";
 
 const childrenRoutes: Routes = [
   {
@@ -8,6 +8,11 @@ const childrenRoutes: Routes = [
     loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule),
     canActivate: [AuthGuardService]
   },
+  {
+    path: 'user-profile',
+    loadChildren: () => import('./modules/user-profile/user-profile.module').then(m => m.UserProfileModule),
+    canActivate: [AuthGuardService]
+  }
 ]
 
 const routes: Routes = [

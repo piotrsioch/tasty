@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {AuthService} from "../../authentication/auth.service";
+import {AuthService} from "../../authentication/service/auth.service";
 import {Router} from "@angular/router";
 
 export interface FormConfig {
@@ -24,7 +24,10 @@ export class AuthFormComponent {
   @Output() formSubmit = new EventEmitter<any>();
   formData: any = {};
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(
+    private authService: AuthService,
+    private router: Router
+  ) {}
 
   onSubmit() {
     if(this.config.isSignIn) {
