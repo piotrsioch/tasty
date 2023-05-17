@@ -7,18 +7,20 @@ import { AppRoutingModule } from "./app-routing.module";
 import { DashboardModule } from "./modules/dashboard/dashboard.module";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
-import {BasicAuthInterceptorService} from "./modules/authentication/basic-auth-interceptor.service";
+import {BasicAuthInterceptorService} from './modules/authentication/service/basic-auth-interceptor.service'
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import { UserProfileModule} from "./modules/user-profile/user-profile.module";
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
     CoreModule,
     LoginModule,
     DashboardModule,
+    UserProfileModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,

@@ -1,0 +1,113 @@
+.wrapper-container {
+  background-color: #edf2f4;
+  height: 100vh;
+  width: 100vw;
+
+  &__header-banner {
+    background-color: #007A33;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    &__navigation-button {
+      position: absolute;
+      left: 15px;
+      top: 10px;
+    }
+
+    &__account-buttons {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+
+      span:nth-child(2) {
+        margin-left: 10px;
+      }
+    }
+
+    &__profile-picture {
+      border-radius: 50%;
+      height: 200px;
+      width: 200px;
+    }
+
+    &__profile-name {
+      font-size: 30px;
+      color: white;
+      font-weight: 400;
+      font-family: "Roboto", serif;
+    }
+  }
+
+  &__profile-info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+
+    &__select-content {
+      color: black;
+      display: flex;
+      width: 100%;
+      margin-top: 10px;
+      justify-content: center;
+      vertical-align: middle;
+      gap: 1rem;
+      font-size: 20px;
+
+      p {
+        margin: 0;
+
+        &:hover {
+          text-shadow: 0 0 10px #404140;
+          cursor: pointer;
+          margin: 0;
+        }
+      }
+
+      span {
+        vertical-align: middle;
+        margin: 0;
+        border: 2px solid black;
+        content: none;
+        color: black;
+      }
+    }
+
+    &__profile-content {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.selectedOption {
+  color: #007A33;
+
+  &:hover {
+    text-shadow: 0 0 10px #01a949;
+    color: #01a949;
+    cursor: pointer;
+  }
+}
+
+.icon {
+  color: white;
+  font-size: 35px;
+
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 1,
+    'wght' 100,
+    'GRAD' 0,
+    'opsz' 48
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: black;
+    transition: color .3s ease;
+  }
+}
