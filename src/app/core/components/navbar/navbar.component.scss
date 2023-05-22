@@ -4,7 +4,7 @@
   &__container {
     width: 100%;
     height: $mainsize * 12;
-    background: #232b2b;
+    background: $color-main;
     display: flex;
     justify-content: space-between;
     align-items: center;

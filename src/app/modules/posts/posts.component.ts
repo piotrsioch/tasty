@@ -3,7 +3,7 @@ import { PostControllerService } from "src/app/core/api/services/post-controller
 import { Post } from "src/app/core/api/models/post";
 
 @Component({
-  selector: 'app-posts',
+  selector: 'tasty-posts',
   templateUrl: './posts.component.html',
   styleUrls: ['./posts.component.scss']
 })
