@@ -1,0 +1,52 @@
+@import "src/assets/styles/variables.scss";
+
+.taste-navbar {
+  &__container {
+    width: 100%;
+    height: $mainsize * 12;
+    background: #232b2b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-left: $mainsize * 6;
+    width: $mainsize * 30;
+    cursor: pointer;
+  }
+
+  &__item-wrapper {
+    &__item {
+      text-decoration: none;
+      color: $color-white-dirty;
+      font-size: $mainsize * 3.5;
+
+      &__active {
+        color: $color-white;
+      }
+
+      &:hover {
+        color: $color-white;
+        transition: color 0.5s;
+      }
+    }
+  }
+
+  &__icons-wrapper {
+    margin-right: $mainsize * 6;
+    display: flex;
+    gap: $mainsize * 3;
+
+    &__icon {
+      color: $color-white-dirty;
+      font-size: $mainsize * 5;
+      cursor: pointer;
+
+      &:hover {
+        color: $color-white;
+        transition: color 1s ease-in-out;
+      }
+    }
+  }
+}
