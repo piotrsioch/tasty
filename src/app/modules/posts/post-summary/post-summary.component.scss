@@ -1,0 +1,65 @@
+@import "src/assets/styles/variables.scss";
+
+.tasty-post-summary {
+  &__container {
+    max-width: 450px;
+    min-height: 520px;
+    padding: $mainsize * 4;
+    border: 1px solid $color-white-dirty;
+    border-radius: $mainsize * 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__title-time-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 $mainsize * 2;
+
+    &__time {
+      display: flex;
+      gap: $mainsize * 2;
+      align-items: center;
+    }
+  }
+
+  &__image {
+    display: flex;
+    align-self: center;
+    object-fit: cover;
+    max-width: 400px;
+    border-radius: 20px;
+    margin: 3 * $mainsize 0;
+  }
+
+  &__description {
+    text-justify: inter-word;
+  }
+
+  &__buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 4 * $mainsize 15 * $mainsize 2 * $mainsize;
+
+    &__check-button {
+      border: none;
+      padding: $mainsize * 2 $mainsize * 5;
+      color: $color-white;
+      background: $color-main;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba($color-main, 0.95);
+        transition: all 0.5s ease-in-out;
+      }
+    }
+
+    &__save-button {
+      border: none;
+      background: transparent;
+      cursor: pointer;
+    }
+  }
+}
