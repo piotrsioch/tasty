@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "update-openapi": "curl http://localhost:8080/v3/api-docs --output openapi.json",
+    "update-api": "ng-openapi-gen --input ./openapi.json --output src/app/core/api",
+    "update-openapi-and-api": "npm run update-openapi & npm run update-api"
   },
   "private": true,
   "dependencies": {
