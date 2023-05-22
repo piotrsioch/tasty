@@ -18,13 +18,4 @@ export class UserProfileComponent implements OnInit {
   ngOnInit(): void {
     this.currentUser = this.authService.currentUser;
   }
-
-  protected handleGoBack() {
-    this.router.navigate(['/dashboard'])
-  }
-
-  protected handleSignOff() {
-    this.authService.logout();
-    this.router.navigate(['/login']);
-  }
 }

@@ -4,15 +4,19 @@ import {AuthGuardService} from "./modules/authentication/service/auth-guard.serv
 
 const childrenRoutes: Routes = [
   {
-    path: 'dashboard',
-    loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule),
+    path: 'posts',
+    loadChildren: () => import('./modules/posts/posts.module').then(m => m.PostsModule),
     canActivate: [AuthGuardService]
   },
   {
     path: 'user-profile',
     loadChildren: () => import('./modules/user-profile/user-profile.module').then(m => m.UserProfileModule),
     canActivate: [AuthGuardService]
-  }
+  },
+  {
+    path: '**',
+    redirectTo: 'posts',
+  },
 ]
 
 const routes: Routes = [

@@ -1,18 +1,5 @@
 <div class="wrapper-container">
   <div class="wrapper-container__header-banner">
-    <div class="wrapper-container__header-banner__navigation-button">
-      <span class="material-symbols-outlined icon" (click)="handleGoBack()">
-        arrow_back
-      </span>
-    </div>
-    <div class="wrapper-container__header-banner__account-buttons">
-     <span class="material-symbols-outlined icon">
-      settings
-    </span>
-    <span class="material-symbols-outlined icon" (click)="handleSignOff()">
-      logout
-    </span>
-    </div>
     <img class="wrapper-container__header-banner__profile-picture" src="/assets/kanapeczki.jpg" alt="">
     <h3 class="wrapper-container__header-banner__profile-name">
       {{currentUser?.firstName}} {{currentUser?.lastName}}

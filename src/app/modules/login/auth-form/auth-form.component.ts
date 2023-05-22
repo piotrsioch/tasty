@@ -35,7 +35,7 @@ export class AuthFormComponent {
         .subscribe({
           next: res => {
             localStorage.setItem('token', res.token);
-            this.router.navigate(['/dashboard'])
+            this.router.navigate([''])
           },
           error: (error) => console.log(error)
         });
