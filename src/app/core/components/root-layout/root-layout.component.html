@@ -1,4 +1,7 @@
 <div class="taste-root-layout__wrapper">
-  <taste-navbar [currentUser]="currentUser"></taste-navbar>
+  <taste-navbar
+    *ngIf="currentUser"
+    [currentUser]="currentUser"
+  ></taste-navbar>
   <router-outlet></router-outlet>
 </div>

@@ -3,7 +3,7 @@ import { RootLayoutComponent } from "./components/root-layout/root-layout.compon
 import { RouterLinkActive, RouterLinkWithHref, RouterOutlet } from "@angular/router";
 import { NavbarComponent } from "src/app/core/components/navbar/navbar.component";
 import { SearchBarComponent } from "src/app/core/components/navbar/search-bar/search-bar.component";
-import { NgForOf } from "@angular/common";
+import { CommonModule, NgForOf, } from "@angular/common";
 import { MatIconModule } from "@angular/material/icon";
 
 @NgModule({
@@ -13,6 +13,7 @@ import { MatIconModule } from "@angular/material/icon";
     SearchBarComponent,
   ],
   imports: [
+    CommonModule,
     RouterOutlet,
     RouterLinkActive,
     RouterLinkWithHref,

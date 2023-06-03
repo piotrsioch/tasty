@@ -7,15 +7,14 @@ import { User } from "src/app/modules/user-profile/models/user.model";
   templateUrl: './root-layout.component.html',
   styleUrls: ['./root-layout.component.scss']
 })
-export class RootLayoutComponent implements OnInit {
+export class RootLayoutComponent {
   public currentUser: User | undefined;
 
-  public constructor (
+  public constructor(
     private readonly _authService: AuthService,
   ) {
-  }
-
-  public ngOnInit() {
-    this.currentUser = this._authService.currentUser;
+    this._authService.user$.subscribe(user => {
+      this.currentUser = user;
+    })
   }
 }
