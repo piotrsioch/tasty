@@ -1,5 +1,5 @@
-import {Component, Input} from '@angular/core';
-import {UserDto} from "../../../../core/api/models/user-dto";
+import { Component, Input } from '@angular/core';
+import { UserDto } from "../../../../core/api/models/user-dto";
 
 @Component({
   selector: 'tasty-user-details',
@@ -7,11 +7,10 @@ import {UserDto} from "../../../../core/api/models/user-dto";
   styleUrls: ['./user-details.component.scss']
 })
 export class UserDetailsComponent {
+  @Input() public user: UserDto | undefined;
 
-  @Input() user!: UserDto;
-
-  get userFullName(): string {
-    return this.user.firstName + " " + this.user.middleName + " " + this.user.lastName;
+   get userFullName(): string {
+    return this.user?.firstName + " " + this.user?.middleName + " " + this.user?.lastName;
   }
 
 }

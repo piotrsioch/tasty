@@ -1,5 +1,5 @@
-import {Component, Input} from '@angular/core';
-import {UserDto} from "../../../../core/api/models/user-dto";
+import { Component, Input } from '@angular/core';
+import { UserDto } from "../../../../core/api/models/user-dto";
 
 @Component({
   selector: 'tasty-user-bio',
@@ -7,5 +7,5 @@ import {UserDto} from "../../../../core/api/models/user-dto";
   styleUrls: ['./user-bio.component.scss']
 })
 export class UserBioComponent {
-  @Input() user!: UserDto;
+  @Input() public user: UserDto | undefined;
 }

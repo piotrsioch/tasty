@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {UserDto} from "../../../core/api/models/user-dto";
-import {AuthService} from "../../authentication/service/auth.service";
+import { UserDto } from "../../../core/api/models/user-dto";
+import { AuthService } from "../../authentication/service/auth.service";
 
 @Component({
   selector: 'tasty-user-profile-info',
@@ -8,17 +8,17 @@ import {AuthService} from "../../authentication/service/auth.service";
   styleUrls: ['./user-profile-info.component.scss']
 })
 export class UserProfileInfoComponent implements OnInit {
+  public currentUser: UserDto | undefined;
 
-  currentUser!: UserDto;
-
-  constructor(private authService: AuthService) {
-
+  public constructor (
+    private authService: AuthService,
+  ) {
+    this.authService.user$.subscribe(user => {
+      this.currentUser = user;
+    })
   }
 
-  ngOnInit(): void {
-
-    this.currentUser = this.authService.user$;
-    console.log(this.currentUser)
+  public ngOnInit(): void {
     this.loadCurrentUser();
   }
 
