@@ -4,9 +4,9 @@
   &__container {
     max-width: 450px;
     min-height: 520px;
-    padding: $mainsize * 4;
+    padding: $main-size * 4;
     border: 1px solid $color-white-dirty;
-    border-radius: $mainsize * 4;
+    border-radius: $main-size * 4;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,11 +16,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 $mainsize * 2;
+    margin: 0 $main-size * 2;
 
     &__time {
       display: flex;
-      gap: $mainsize * 2;
+      gap: $main-size * 2;
       align-items: center;
     }
   }
@@ -31,7 +31,7 @@
     object-fit: cover;
     max-width: 400px;
     border-radius: 20px;
-    margin: 3 * $mainsize 0;
+    margin: 3 * $main-size 0;
   }
 
   &__description {
@@ -41,11 +41,11 @@
   &__buttons-wrapper {
     display: flex;
     justify-content: space-between;
-    margin: 4 * $mainsize 15 * $mainsize 2 * $mainsize;
+    margin: 4 * $main-size 15 * $main-size 2 * $main-size;
 
     &__check-button {
       border: none;
-      padding: $mainsize * 2 $mainsize * 5;
+      padding: $main-size * 2 $main-size * 5;
       color: $color-white;
       background: $color-main;
       cursor: pointer;
