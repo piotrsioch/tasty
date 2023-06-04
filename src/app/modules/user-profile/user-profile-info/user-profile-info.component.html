@@ -1,0 +1,16 @@
+<div class="user-details">
+  <div class="profile-photo">
+    <img class="photo" alt="prof_photo" src="/assets/kanapeczki.jpg">
+  </div>
+  <div class="bio">
+    <tasty-user-bio [user]="currentUser"></tasty-user-bio>
+  </div>
+  <hr class="vertical-separator">
+  <div class="details">
+    <tasty-user-details [user]="currentUser"></tasty-user-details>
+  </div>
+  <hr class="vertical-separator">
+  <div class="social-media">
+    <tasty-user-media [user]="currentUser"></tasty-user-media>
+  </div>
+</div>

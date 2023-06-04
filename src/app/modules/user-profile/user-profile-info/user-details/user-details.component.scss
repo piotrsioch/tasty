@@ -1,0 +1,25 @@
+@import "src/assets/styles/variables";
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+  padding: 10px 20px;
+
+  .details-row {
+    display: flex;
+    align-items: center;
+    gap: 2 * $main-size;
+
+    .row-icon > .icon {
+      width: 100%;
+      font-size: 35px;
+      justify-self: flex-start;
+    }
+
+    .row-value {
+      font-family: Roboto sans-serif;
+      font-size: 20px;
+    }
+  }
+}

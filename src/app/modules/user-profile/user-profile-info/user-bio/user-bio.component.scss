@@ -1,0 +1,36 @@
+.bio-container {
+  padding: 10px 20px;
+
+  .bio-title {
+    font-weight: 600;
+    font-size: 20px;
+    font-family: Roboto sans-serif;
+    margin-bottom: 5px;
+  }
+
+  .bio-content {
+    font-family: Roboto sans-serif;
+    font-size: 16px;
+    height: 125px;
+    overflow-y: auto;
+  }
+}
+
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #afacac #ffffff;
+}
+
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: none;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #afacac;
+  border-radius: 10px;
+  border: 5px solid #edede9;
+}

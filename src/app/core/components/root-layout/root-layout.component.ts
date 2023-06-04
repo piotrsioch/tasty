@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { AuthService } from "src/app/modules/authentication/service/auth.service";
-import { User } from "src/app/modules/user-profile/models/user.model";
+import {Component} from '@angular/core';
+import {AuthService} from "src/app/modules/authentication/service/auth.service";
+import {UserDto} from "../../api/models/user-dto";
 
 @Component({
   selector: 'taste-root-layout',
@@ -8,7 +8,7 @@ import { User } from "src/app/modules/user-profile/models/user.model";
   styleUrls: ['./root-layout.component.scss']
 })
 export class RootLayoutComponent {
-  public currentUser: User | undefined;
+  public currentUser: UserDto;
 
   public constructor(
     private readonly _authService: AuthService,

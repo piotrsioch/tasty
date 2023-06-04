@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from "@angular/router";
-import { AuthService } from "../authentication/service/auth.service";
-import { User } from "./models/user.model";
+import { Component} from '@angular/core';
+import {Router} from "@angular/router";
+import {AuthService} from "../authentication/service/auth.service";
+import {User} from "./models/user.model";
 
 @Component({
   selector: 'taste-user-profile',
@@ -10,7 +10,6 @@ import { User } from "./models/user.model";
 })
 export class UserProfileComponent {
   public currentUser: User | undefined;
-  protected selectedOption = "info"
 
   public constructor(
     private router: Router,

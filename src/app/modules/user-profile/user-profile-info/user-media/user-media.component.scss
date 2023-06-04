@@ -1,0 +1,20 @@
+.media-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  min-width: 100%;
+  padding: 0 20px;
+  gap: 10px;
+
+  .icon {
+    font-size: 50px;
+    width: 100%;
+    cursor: pointer;
+    color: black;
+
+    &:hover {
+      transition: color .3s ease-in-out;
+      color: #d4af7a;
+    }
+  }
+}

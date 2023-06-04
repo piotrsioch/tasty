@@ -1,8 +1,8 @@
 import {Component, Input} from '@angular/core';
 import {Router} from "@angular/router";
 import {AuthService} from "src/app/modules/authentication/service/auth.service";
-import {User} from "src/app/modules/user-profile/models/user.model";
-import { NavbarMenuItems } from "src/app/core/components/navbar/menu-items";
+import {NavbarMenuItems} from "src/app/core/components/navbar/menu-items";
+import {UserDto} from "../../api/models/user-dto";
 
 @Component({
   selector: 'taste-navbar',
@@ -10,13 +10,14 @@ import { NavbarMenuItems } from "src/app/core/components/navbar/menu-items";
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-  @Input() currentUser: User | undefined;
+  @Input() currentUser!: UserDto;
   public _menuItems = NavbarMenuItems;
 
   public constructor (
     private router: Router,
     private authService: AuthService,
   ) {
+
   }
 
   protected handleSignOff() {
