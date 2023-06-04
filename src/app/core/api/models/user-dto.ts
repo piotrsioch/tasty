@@ -8,6 +8,7 @@ export interface UserDto {
   id?: number;
   lastName?: string;
   middleName?: string;
+  bio?: string;
   password?: string;
   phoneNumber?: string;
 }

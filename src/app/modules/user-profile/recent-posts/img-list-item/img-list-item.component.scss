@@ -1,0 +1,14 @@
+.item-container {
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  .item-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid gray;
+  }
+}
