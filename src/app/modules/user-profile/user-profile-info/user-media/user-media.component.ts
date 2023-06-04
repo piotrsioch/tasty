@@ -1,5 +1,5 @@
-import {Component, Input} from '@angular/core';
-import {UserDto} from "../../../../core/api/models/user-dto";
+import { Component, Input } from '@angular/core';
+import { UserDto } from "../../../../core/api/models/user-dto";
 
 @Component({
   selector: 'tasty-user-media',
@@ -7,5 +7,5 @@ import {UserDto} from "../../../../core/api/models/user-dto";
   styleUrls: ['./user-media.component.scss']
 })
 export class UserMediaComponent {
-  @Input() user!: UserDto;
+  @Input() public user: UserDto | undefined;
 }

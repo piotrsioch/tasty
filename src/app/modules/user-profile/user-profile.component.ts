@@ -1,7 +1,7 @@
 import { Component} from '@angular/core';
-import {Router} from "@angular/router";
-import {AuthService} from "../authentication/service/auth.service";
-import {User} from "./models/user.model";
+import { Router } from "@angular/router";
+import { AuthService } from "../authentication/service/auth.service";
+import { UserDto } from "src/app/core/api/models/user-dto";
 
 @Component({
   selector: 'taste-user-profile',
@@ -9,7 +9,7 @@ import {User} from "./models/user.model";
   styleUrls: ['./user-profile.component.scss']
 })
 export class UserProfileComponent {
-  public currentUser: User | undefined;
+  public currentUser: UserDto | undefined;
 
   public constructor(
     private router: Router,
