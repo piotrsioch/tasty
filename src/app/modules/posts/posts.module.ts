@@ -4,21 +4,39 @@ import { PostsComponent } from "src/app/modules/posts/posts.component";
 import { RouterModule, Routes } from "@angular/router";
 import { PostSummaryComponent } from './post-summary/post-summary.component';
 import { MatIconModule } from "@angular/material/icon";
+import { CreatePostComponent } from './create-post/create-post.component';
+import { ReactiveFormsModule } from "@angular/forms";
+import { MatSelectModule } from "@angular/material/select";
 
 const routes: Routes = [{
   path: '',
-  component: PostsComponent,
+  children: [
+    {
+      path: "",
+      component: PostsComponent,
+    },
+    {
+      path: "create-post",
+      component: CreatePostComponent,
+    }
+  ]
 }]
 
 @NgModule({
   declarations: [
     PostsComponent,
-    PostSummaryComponent
+    PostSummaryComponent,
+    CreatePostComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     MatIconModule,
+    ReactiveFormsModule,
+    MatSelectModule,
+  ],
+  exports: [
+    RouterModule
   ]
 })
 export class PostsModule { }

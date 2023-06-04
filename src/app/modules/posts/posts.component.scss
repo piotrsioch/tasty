@@ -4,8 +4,8 @@
   &__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10 * $mainsize;
-    margin: 10 * $mainsize 0;
+    gap: 10 * $main-size;
+    margin: 10 * $main-size 0;
     justify-items: center;
   }
 }
