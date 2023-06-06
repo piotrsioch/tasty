@@ -5,9 +5,14 @@ import { UserDto } from './user-dto';
 export interface PostDto {
   author?: UserDto;
   comments?: Array<CommentDto>;
-  content?: string;
+  cookingTime?: number;
   created?: string;
+  description?: string;
+  difficulty?: number;
   id?: number;
+  ingredients?: string;
+  postPicture?: string;
+  shortDescription?: string;
   title?: string;
   updated?: string;
 }

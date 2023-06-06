@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Post } from "src/app/core/api/models/post";
+import { PostDto } from "../../../core/api/models/post-dto";
 
 @Component({
   selector: 'tasty-post-summary',
@@ -7,7 +7,7 @@ import { Post } from "src/app/core/api/models/post";
   styleUrls: ['./post-summary.component.scss']
 })
 export class PostSummaryComponent implements OnInit {
-  @Input() public _post!: Post;
+  @Input() public _post!: PostDto;
 
   constructor() { }
 

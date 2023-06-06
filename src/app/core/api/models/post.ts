@@ -5,9 +5,14 @@ import { User } from './user';
 export interface Post {
   author?: User;
   comments?: Array<Comment>;
-  content?: string;
+  cookingTime?: number;
   created?: string;
+  description?: string;
+  difficulty?: number;
   id?: number;
+  ingredients?: string;
+  postPicture?: Array<string>;
+  shortDescription?: string;
   title?: string;
   updated?: string;
 }
