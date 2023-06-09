@@ -5,7 +5,7 @@
     </div>
     <div class="tasty-post-summary__title-time-wrapper__time">
       <mat-icon class="tasty-post-summary__title-time-wrapper__time__icon">access_time</mat-icon>
-      <span>30 minutes</span>
+      <span>{{ _post.cookingTime }} minutes</span>
     </div>
   </div>
     <img
@@ -14,12 +14,11 @@
       class="tasty-post-summary__image"
     >
   <div class="tasty-post-summary__description">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores et quas veritatis. Aperiam corporis
-    dignissimos harum itaque laudantium nostrum obcaecati omnis quibusdam quo similique!
-    At consectetur corporis quas sed voluptas.
+    {{ _post.shortDescription }}
   </div>
   <div class="tasty-post-summary__buttons-wrapper">
     <button
+      (click)="openPostDetails()"
       class="tasty-post-summary__buttons-wrapper__check-button"
     >
       See recipe
