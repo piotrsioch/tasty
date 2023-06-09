@@ -6,10 +6,11 @@ export { RepresentationModelObject } from './models/representation-model-object'
 export { Comment } from './models/comment';
 export { EntityModelPost } from './models/entity-model-post';
 export { GrantedAuthority } from './models/granted-authority';
-export { PageMetadata } from './models/page-metadata';
-export { PagedModelEntityModelPost } from './models/paged-model-entity-model-post';
+export { Media } from './models/media';
 export { Post } from './models/post';
 export { User } from './models/user';
+export { PageMetadata } from './models/page-metadata';
+export { PagedModelEntityModelPost } from './models/paged-model-entity-model-post';
 export { CollectionModelComment } from './models/collection-model-comment';
 export { CollectionModelObject } from './models/collection-model-object';
 export { EntityModelUser } from './models/entity-model-user';

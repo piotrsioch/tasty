@@ -7,6 +7,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { CreatePostComponent } from './create-post/create-post.component';
 import { ReactiveFormsModule } from "@angular/forms";
 import { MatSelectModule } from "@angular/material/select";
+import { PostDetailsComponent } from './post-details/post-details.component';
 
 const routes: Routes = [{
   path: '',
@@ -18,6 +19,10 @@ const routes: Routes = [{
     {
       path: "create-post",
       component: CreatePostComponent,
+    },
+    {
+      path: ":id",
+      component: PostDetailsComponent,
     }
   ]
 }]
@@ -26,7 +31,8 @@ const routes: Routes = [{
   declarations: [
     PostsComponent,
     PostSummaryComponent,
-    CreatePostComponent
+    CreatePostComponent,
+    PostDetailsComponent
   ],
   imports: [
     CommonModule,

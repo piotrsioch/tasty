@@ -1,0 +1,52 @@
+<div
+  *ngIf="_post"
+  class="tasty-post-details__container"
+>
+  <div class="tasty-post-details__author-wrapper">
+    <span class="tasty-post-details__author-wrapper__author">
+      {{ _post.author?.firstName }} {{ _post.author?.lastName }}
+    </span>
+    <span class="tasty-post-details__author-wrapper__date">
+      {{ _post.created | date:'medium' }}
+    </span>
+  </div>
+  <div class="tasty-post-details__title-summary-wrapper">
+    <h1 class="tasty-post-details__title-summary-wrapper__title">
+      {{ _post.title }}
+    </h1>
+    <div class="tasty-post-details__title-summary-wrapper__summary">
+      Summary:
+      {{ _post.shortDescription }}
+    </div>
+  </div>
+  <div class="tasty-post-details__statistics-wrapper">
+    <div class="tasty-post-details__statistics-wrapper__difficulty">
+      <span>Difficulty: {{ _post.difficulty }}/3</span>
+    </div>
+    <div class="tasty-post-details__statistics-wrapper__time">
+      Required time: {{ _post.cookingTime }} minutes
+    </div>
+    <div class="tasty-post-details__statistics-wrapper__categories">
+      Categories:
+      <ng-container *ngFor="let category of _categories">
+        {{ category }}
+      </ng-container>
+    </div>
+  </div>
+  <div class="tasty-post-details__ingredients-wrapper">
+    <h2 class="tasty-post-details__ingredients-wrapper__title">Ingredients</h2>
+    <ul class="tasty-post-details__ingredients-wrapper__list">
+      <li *ngFor="let ingredient of _ingredients">
+        {{ ingredient }}
+      </li>
+    </ul>
+  </div>
+  <div class="tasty-post-details__recipe-wrapper">
+    <h2 class="tasty-post-details__recipe-wrapper__title">Method</h2>
+    <ol class="tasty-post-details__recipe-wrapper__list">
+      <li *ngFor="let item of _steps">
+        {{ item }}
+      </li>
+    </ol>
+  </div>
+</div>
