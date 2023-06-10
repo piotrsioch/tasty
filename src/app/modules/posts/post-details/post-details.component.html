@@ -36,16 +36,16 @@
   <div class="tasty-post-details__ingredients-wrapper">
     <h2 class="tasty-post-details__ingredients-wrapper__title">Ingredients</h2>
     <ul class="tasty-post-details__ingredients-wrapper__list">
-      <li *ngFor="let ingredient of _ingredients">
-        {{ ingredient }}
+      <li *ngFor="let ingredient of _post.ingredients">
+        {{ ingredient.name }}
       </li>
     </ul>
   </div>
   <div class="tasty-post-details__recipe-wrapper">
     <h2 class="tasty-post-details__recipe-wrapper__title">Method</h2>
     <ol class="tasty-post-details__recipe-wrapper__list">
-      <li *ngFor="let item of _steps">
-        {{ item }}
+      <li *ngFor="let item of _post.preparationSteps">
+        {{ item.step }}
       </li>
     </ol>
   </div>

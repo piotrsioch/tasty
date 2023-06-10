@@ -47,7 +47,7 @@
           *ngFor="let ingredient of ingredientsList; let i = index"
           class="tasty-create-post__list-input-wrapper__list-container"
         >
-          <li class="tasty-create-post__list-input-wrapper__list-container__text">{{ ingredient }}</li>
+          <li class="tasty-create-post__list-input-wrapper__list-container__text">{{ ingredient.name }}</li>
           <button
             (click)="onDeleteIngredientClick(i)"
             class="tasty-create-post__list-input-wrapper__list-container__button"
@@ -104,7 +104,7 @@
           *ngFor="let step of recipeStepsList; let i = index"
           class="tasty-create-post__list-input-wrapper__list-container"
         >
-          <li class="tasty-create-post__list-input-wrapper__list-container__text">{{ step }}</li>
+          <li class="tasty-create-post__list-input-wrapper__list-container__text">{{ step.step }}</li>
           <button
             (click)="onDeleteStepClick(i)"
             class="tasty-create-post__list-input-wrapper__list-container__button"

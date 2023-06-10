@@ -5,11 +5,11 @@ export interface PostRequestBody {
   comments?: Array<string>;
   cookingTime?: number;
   created?: string;
-  description?: string;
   difficulty?: number;
   id?: number;
-  ingredients?: string;
+  ingredients?: Array<string>;
   postPicture?: Array<string>;
+  preparationSteps?: Array<string>;
   shortDescription?: string;
   title?: string;
   updated?: string;
