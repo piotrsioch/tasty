@@ -35,13 +35,13 @@
 
     &__list {
       padding-left: $main-size * 8;
+      line-height: 1.5;
     }
   }
 
   &__recipe-wrapper {
     &__title {
       margin: $main-size * 5 0;
-      line-height: 1.5;
     }
 
     &__list {
