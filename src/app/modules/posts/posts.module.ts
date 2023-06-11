@@ -8,6 +8,10 @@ import { CreatePostComponent } from './create-post/create-post.component';
 import { ReactiveFormsModule } from "@angular/forms";
 import { MatSelectModule } from "@angular/material/select";
 import { PostDetailsComponent } from './post-details/post-details.component';
+import { CommentsListComponent } from './comments-list/comments-list.component';
+import { CommentComponent } from './comments-list/comment/comment.component';
+import { AddCommentComponent } from './comments-list/add-comment/add-comment.component';
+import { MatDividerModule } from "@angular/material/divider";
 
 const routes: Routes = [{
   path: '',
@@ -32,7 +36,10 @@ const routes: Routes = [{
     PostsComponent,
     PostSummaryComponent,
     CreatePostComponent,
-    PostDetailsComponent
+    PostDetailsComponent,
+    CommentsListComponent,
+    CommentComponent,
+    AddCommentComponent
   ],
   imports: [
     CommonModule,
@@ -40,6 +47,7 @@ const routes: Routes = [{
     MatIconModule,
     ReactiveFormsModule,
     MatSelectModule,
+    MatDividerModule,
   ],
   exports: [
     RouterModule
