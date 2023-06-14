@@ -23,7 +23,10 @@
     >
       See recipe
     </button>
-    <button class="tasty-post-summary__buttons-wrapper__save-button">
+    <button
+      (click)="addPostToFavourites()"
+      class="tasty-post-summary__buttons-wrapper__save-button"
+    >
       <mat-icon>favorite_border</mat-icon>
     </button>
   </div>

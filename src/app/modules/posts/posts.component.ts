@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { PostControllerService } from "src/app/core/api/services/post-controller.service";
-import { Post } from "src/app/core/api/models/post";
-import { Router } from "@angular/router";
 import { PostDto } from "../../core/api/models/post-dto";
 
 @Component({
@@ -14,7 +12,6 @@ export class PostsComponent {
 
   public constructor (
     private readonly _postControllerService: PostControllerService,
-    private readonly _router: Router,
   ) {
     this._postControllerService.getPosts({ pageSize: 20 }).subscribe(data => {
       this._posts = data;
