@@ -1,9 +1,9 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from "@angular/forms";
-import { CommentEntityControllerService } from "../../../../core/api/services/comment-entity-controller.service";
 import { AuthService } from "../../../authentication/service/auth.service";
 import { UserDto } from "../../../../core/api/models/user-dto";
 import { PostDto } from "../../../../core/api/models/post-dto";
+import { CommentControllerService } from "../../../../core/api/services/comment-controller.service";
 
 @Component({
   selector: 'tasty-add-comment',
@@ -11,7 +11,8 @@ import { PostDto } from "../../../../core/api/models/post-dto";
   styleUrls: ['./add-comment.component.scss']
 })
 export class AddCommentComponent {
-  @Input() private post: PostDto;
+  @Input() public post: PostDto;
+  @Output() public commentAdded: EventEmitter<boolean> = new EventEmitter();
   public commentForm = new FormGroup({
     comment: new FormControl('', Validators.required)
   });
@@ -19,20 +20,26 @@ export class AddCommentComponent {
 
   public constructor(
     private _authService: AuthService,
-    private _postPropertyReferenceControllerService: CommentEntityControllerService,
+    private _commentControllerService: CommentControllerService,
   ) {
     this._authService.user$.subscribe(user => this.user = user!);
   }
 
   public addComment(): void {
+    const date = new Date(Date.now()).toISOString();
+
     if (!this.commentForm.invalid) {
-      // this._postPropertyReferenceControllerService.postCollectionResourceCommentPost({
-      //   body: {
-      //     author: `${ this.user.firstName } ${ this.user.lastName }`,
-      //     content: this.commentForm.value.comment!,
-      //     post: 'bla',
-      //   }
-      // })
+      this._commentControllerService.createComment({
+        body: {
+          authorId: this.user.id,
+          content: this.commentForm.value.comment!,
+          created: date,
+          postId: this.post.id,
+        }
+      }).subscribe(_ => {
+        this.commentForm.reset();
+        this.commentAdded.emit(true);
+      })
     }
   }
 }

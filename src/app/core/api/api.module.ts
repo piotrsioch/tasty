@@ -7,6 +7,9 @@ import { ApiConfiguration, ApiConfigurationParams } from './api-configuration';
 import { CommentEntityControllerService } from './services/comment-entity-controller.service';
 import { CommentSearchControllerService } from './services/comment-search-controller.service';
 import { CommentPropertyReferenceControllerService } from './services/comment-property-reference-controller.service';
+import { FavouritePostEntityControllerService } from './services/favourite-post-entity-controller.service';
+import { FavouritePostSearchControllerService } from './services/favourite-post-search-controller.service';
+import { FavouritePostPropertyReferenceControllerService } from './services/favourite-post-property-reference-controller.service';
 import { PostEntityControllerService } from './services/post-entity-controller.service';
 import { PostPropertyReferenceControllerService } from './services/post-property-reference-controller.service';
 import { ProfileControllerService } from './services/profile-controller.service';
@@ -14,6 +17,7 @@ import { UserEntityControllerService } from './services/user-entity-controller.s
 import { UserSearchControllerService } from './services/user-search-controller.service';
 import { UserControllerService } from './services/user-controller.service';
 import { PostControllerService } from './services/post-controller.service';
+import { FavouritePostControllerService } from './services/favourite-post-controller.service';
 import { CommentControllerService } from './services/comment-controller.service';
 import { AuthenticationControllerService } from './services/authentication-controller.service';
 
@@ -28,6 +32,9 @@ import { AuthenticationControllerService } from './services/authentication-contr
     CommentEntityControllerService,
     CommentSearchControllerService,
     CommentPropertyReferenceControllerService,
+    FavouritePostEntityControllerService,
+    FavouritePostSearchControllerService,
+    FavouritePostPropertyReferenceControllerService,
     PostEntityControllerService,
     PostPropertyReferenceControllerService,
     ProfileControllerService,
@@ -35,6 +42,7 @@ import { AuthenticationControllerService } from './services/authentication-contr
     UserSearchControllerService,
     UserControllerService,
     PostControllerService,
+    FavouritePostControllerService,
     CommentControllerService,
     AuthenticationControllerService,
     ApiConfiguration
