@@ -1,3 +1,6 @@
+@use "src/assets/styles/mixins";
+@import "src/assets/styles/variables.scss";
+
 .wrapper-container {
   display: flex;
   flex-direction: row;
@@ -14,4 +17,9 @@
     height: 100%;
     flex: 3;
   }
+}
+
+.button {
+  margin: 10 * $main-size 5 * $main-size;
+  @include mixins.default-button;
 }

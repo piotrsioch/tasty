@@ -17,12 +17,7 @@ export class PostsComponent {
     private readonly _router: Router,
   ) {
     this._postControllerService.getPosts({ pageSize: 20 }).subscribe(data => {
-      console.log(data);
       this._posts = data;
     })
-  }
-
-  public navigateToCreatePost(): void {
-    this._router.navigate(['posts/create-post']);
   }
 }

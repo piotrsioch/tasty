@@ -71,7 +71,10 @@
         formControlName="difficulty"
         class="tasty-create-post__select-wrapper__select"
       >
-        <mat-option *ngFor="let diff of difficulties" [value]="diff">
+        <mat-option
+          *ngFor="let diff of difficulties"
+          [value]="diff"
+        >
           {{ diff }}
         </mat-option>
       </mat-select>
