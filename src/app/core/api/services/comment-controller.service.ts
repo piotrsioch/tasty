@@ -34,7 +34,6 @@ export class CommentControllerService extends BaseService {
    * This method sends `application/json` and handles request body of type `application/json`.
    */
   updateComment$Response(params: {
-    id: number;
     body: CommentDto
   },
   context?: HttpContext
@@ -43,7 +42,6 @@ export class CommentControllerService extends BaseService {
 
     const rb = new RequestBuilder(this.rootUrl, CommentControllerService.UpdateCommentPath, 'put');
     if (params) {
-      rb.path('id', params.id, {});
       rb.body(params.body, 'application/json');
     }
 
@@ -66,7 +64,6 @@ export class CommentControllerService extends BaseService {
    * This method sends `application/json` and handles request body of type `application/json`.
    */
   updateComment(params: {
-    id: number;
     body: CommentDto
   },
   context?: HttpContext

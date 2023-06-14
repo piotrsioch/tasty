@@ -2,6 +2,7 @@
 /* eslint-disable */
 export interface PostRequestBody {
   author?: string;
+  categories?: Array<string>;
   comments?: Array<string>;
   cookingTime?: number;
   created?: string;

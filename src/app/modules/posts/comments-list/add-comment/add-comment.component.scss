@@ -17,13 +17,16 @@
     }
 
     &__button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       align-self: end;
       border: none;
       cursor: pointer;
       transition: all 0.3s ease-in-out;
       width: $main-size * 10;
       margin-top: $main-size * 2;
-      padding: $main-size $main-size * 3;
+      padding: $main-size * 2 $main-size * 6;
       background: rgba($color-main, 0.8);
       color: $color-white;
 

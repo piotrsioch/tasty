@@ -1,9 +1,9 @@
 /* tslint:disable */
 /* eslint-disable */
-import { UserDto } from './user-dto';
 export interface CommentDto {
-  author?: UserDto;
+  authorId?: number;
   content?: string;
   created?: string;
   id?: number;
+  postId?: number;
 }

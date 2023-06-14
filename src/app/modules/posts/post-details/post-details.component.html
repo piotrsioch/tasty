@@ -50,6 +50,9 @@
     </ol>
   </div>
   <div class="tasty-post-details__comments">
-    <tasty-comments-list [post]="_post"></tasty-comments-list>
+    <tasty-comments-list
+      [post]="_post"
+      (commentAdded)="refreshPost()"
+    ></tasty-comments-list>
   </div>
 </div>
