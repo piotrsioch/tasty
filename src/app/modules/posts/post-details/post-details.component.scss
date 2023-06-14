@@ -10,6 +10,7 @@
     margin-top: $main-size * 10;
     display: flex;
     justify-content: space-between;
+    font-weight: 600;
   }
 
   &__title-summary-wrapper {
@@ -18,7 +19,7 @@
     }
 
     &__summary {
-      margin-bottom: $main-size * 5;
+      margin-bottom: $main-size * 2;
     }
   }
 

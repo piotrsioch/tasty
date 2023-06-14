@@ -1,18 +1,5 @@
+@use "src/assets/styles/mixins";
 @import "src/assets/styles/variables.scss";
-
-@mixin add-button {
-  padding: $main-size * 2 $main-size * 5;
-  cursor: pointer;
-  background-color: rgba($color-main, 0.8);
-  border: none;
-  color: $color-white;
-  transition: all 0.3s ease-in-out;
-
-  &:disabled {
-    background-color: rgba($color-main, 0.1);
-    cursor: unset;
-  }
-}
 
 .tasty-create-post {
   &__container {
@@ -60,7 +47,7 @@
       }
 
       &__button {
-       @include add-button;
+       @include mixins.default-button;
       }
     }
 
@@ -77,7 +64,7 @@
       &__button {
         width: $main-size * 5;
         height: $main-size * 5;
-        background-color: rgba($color-main, 0.8);
+        background-color: rgba($color-main, 0.95);
         border: none;
         border-radius: 50%;
 
@@ -93,7 +80,7 @@
     }
 
     &__button {
-      @include add-button;
+      @include mixins.default-button;
     }
   }
 
@@ -119,7 +106,7 @@
   }
 
   &__add-recipe-button {
-    @include add-button;
+    @include mixins.default-button;
     margin: $main-size * 2 0;
   }
 }

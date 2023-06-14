@@ -15,21 +15,26 @@
       {{ _post.title }}
     </h1>
     <div class="tasty-post-details__title-summary-wrapper__summary">
-      Summary:
+      <b>Summary:</b>
       {{ _post.shortDescription }}
     </div>
   </div>
   <div class="tasty-post-details__statistics-wrapper">
     <div class="tasty-post-details__statistics-wrapper__difficulty">
-      <span>Difficulty: {{ _post.difficulty }}/3</span>
+      <span>
+        <b>Difficulty:</b>
+        {{ _difficulty }}
+      </span>
     </div>
     <div class="tasty-post-details__statistics-wrapper__time">
-      Required time: {{ _post.cookingTime }} minutes
+      <b>Required time:</b>
+      {{ _post.cookingTime }}
+      minutes
     </div>
     <div class="tasty-post-details__statistics-wrapper__categories">
-      Categories:
-      <ng-container *ngFor="let category of _categories">
-        {{ category }}
+      <b>Categories:</b>
+      <ng-container *ngFor="let category of _post.categories">
+        {{ category.name }}
       </ng-container>
     </div>
   </div>

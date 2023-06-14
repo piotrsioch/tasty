@@ -12,11 +12,15 @@ export class UserProfileComponent {
   public currentUser: UserDto | undefined;
 
   public constructor(
-    private router: Router,
+    private _router: Router,
     private authService: AuthService,
   ) {
     this.authService.user$.subscribe(user => {
       this.currentUser = user;
     })
+  }
+
+  public navigateToCreatePost(): void {
+    this._router.navigate(['posts/create-post']);
   }
 }

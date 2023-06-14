@@ -1,3 +1,4 @@
+@use "src/assets/styles/mixins";
 @import "src/assets/styles/variables.scss";
 
 .tasty-add-comment {
@@ -17,23 +18,12 @@
     }
 
     &__button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include mixins.default-button;
       align-self: end;
-      border: none;
-      cursor: pointer;
-      transition: all 0.3s ease-in-out;
       width: $main-size * 10;
       margin-top: $main-size * 2;
-      padding: $main-size * 2 $main-size * 6;
-      background: rgba($color-main, 0.8);
+      padding: $main-size * 2 $main-size * 7;
       color: $color-white;
-
-      &:disabled {
-        cursor: unset;
-        background-color: rgba($color-main, 0.1);
-      }
     }
   }
 }

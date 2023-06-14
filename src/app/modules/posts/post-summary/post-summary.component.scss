@@ -1,3 +1,4 @@
+@use "src/assets/styles/mixins";
 @import "src/assets/styles/variables.scss";
 
 .tasty-post-summary {
@@ -44,16 +45,7 @@
     margin: 4 * $main-size 15 * $main-size 2 * $main-size;
 
     &__check-button {
-      border: none;
-      padding: $main-size * 2 $main-size * 5;
-      color: $color-white;
-      background: $color-main;
-      cursor: pointer;
-
-      &:hover {
-        background-color: rgba($color-main, 0.95);
-        transition: all 0.5s ease-in-out;
-      }
+     @include mixins.default-button;
     }
 
     &__save-button {

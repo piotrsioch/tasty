@@ -7,6 +7,7 @@ import { difficultyStringToNumberMap } from "../../../shared/utils/difficultyMap
 import { IngredientDto } from "../../../core/api/models/ingredient-dto";
 import { PreparationStepDto } from "../../../core/api/models/preparation-step-dto";
 import { Router } from "@angular/router";
+import { ProductCategoryDto } from "../../../core/api/models/product-category-dto";
 
 @Component({
   selector: 'tasty-create-post',
@@ -35,7 +36,7 @@ export class CreatePostComponent {
     title: new FormControl('', [Validators.required]),
     shortDescription: new FormControl('', [Validators.required]),
     categories: new FormControl([], [Validators.required]),
-    time: new FormControl<number>(0, [Validators.required]),
+    time: new FormControl<number>(0, [Validators.required, Validators.min(1), Validators.max(10080)]),
     difficulty: new FormControl('', [Validators.required]),
   })
 
@@ -64,8 +65,7 @@ export class CreatePostComponent {
   }
 
   public onFormSubmit(): void {
-    const timeStamp = Date.now();
-    const date = new Date(timeStamp).toISOString();
+    const date = new Date(Date.now()).toISOString();
 
     if (!this.recipeForm.invalid && this.recipeStepsList.length > 0 && this.ingredientsList.length > 0) {
       this._postControllerService.createPost({
@@ -79,8 +79,19 @@ export class CreatePostComponent {
           preparationSteps: this.recipeStepsList,
           shortDescription: this.recipeForm.value.shortDescription!,
           title: this.recipeForm.value.title!,
+          categories: this.getMappedObjectArrayFromCategories(this.recipeForm.value.categories!),
         }
       }).subscribe(_ => this._router.navigate(['/posts']))
     }
+  }
+
+  private getMappedObjectArrayFromCategories(categories: string[]) {
+    const mappedCategoriesArray: ProductCategoryDto[] = [];
+
+    categories.forEach(category => {
+      mappedCategoriesArray.push({ name: category})
+    });
+
+    return mappedCategoriesArray;
   }
 }
