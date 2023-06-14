@@ -14,6 +14,6 @@ export class PostSummaryComponent {
   }
 
   public openPostDetails() {
-    this._router.navigate(['/posts', this._post.id]);
+    this._router.navigate(['/posts', this._post.postId]);
   }
 }

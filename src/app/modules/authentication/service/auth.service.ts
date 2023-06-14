@@ -34,8 +34,8 @@ export class AuthService {
     );
   }
 
-  public register(name: string, email: string, password: string) {
-    return this.httpClient.post(`${ this.apiUrl }/register`, { name, email, password });
+  public register(firstName: string, lastName: string, email: string, password: string) {
+    return this.httpClient.post(`${ this.apiUrl }/register`, { firstName, lastName, email, password });
   }
 
   public logout() {

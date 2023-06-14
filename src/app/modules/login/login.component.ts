@@ -20,7 +20,8 @@ export class LoginComponent {
     buttonText: 'Sign Up',
     isSignIn: false,
     fields: [
-      { label: 'Name', name: 'name', type: 'text', required: true },
+      { label: 'firstName', name: 'firstName', type: 'text', required: true },
+      { label: 'lastName', name: 'lastName', type: 'text', required: true },
       { label: 'Email', name: 'email', type: 'email', required: true },
       { label: 'Password', name: 'password', type: 'password', required: true }
     ]

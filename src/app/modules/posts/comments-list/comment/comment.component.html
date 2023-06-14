@@ -2,7 +2,7 @@
   <mat-divider></mat-divider>
   <div class="tasty-comment__author-date-wrapper">
     <div class="tasty-comment__author-date-wrapper__author">
-      {{ comment.authorId }}
+      {{ comment.firstName }} {{ comment.lastName }}
     </div>
     <div class="tasty-comment__author-date-wrapper__date">
       {{ comment.created | date:'medium' }}

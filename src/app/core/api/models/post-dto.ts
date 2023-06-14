@@ -10,9 +10,10 @@ export interface PostDto {
   categories?: Array<ProductCategoryDto>;
   comments?: Array<CommentDto>;
   cookingTime?: number;
+  category?: string;
   created?: string;
   difficulty?: number;
-  id?: number;
+  postId?: number;
   ingredients?: Array<IngredientDto>;
   isLikedByUser?: boolean;
   numberOfLikes?: number;

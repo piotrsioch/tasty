@@ -34,7 +34,7 @@ export class AddCommentComponent {
           authorId: this.user.id,
           content: this.commentForm.value.comment!,
           created: date,
-          postId: this.post.id,
+          postId: this.post.postId,
         }
       }).subscribe(_ => {
         this.commentForm.reset();

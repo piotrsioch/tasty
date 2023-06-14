@@ -40,7 +40,7 @@ export class AuthFormComponent {
           error: (error) => console.log(error)
         });
     } else if (!this.config.isSignIn) {
-      this.authService.register(this.formData.name, this.formData.email, this.formData.password)
+      this.authService.register(this.formData.firstName, this.formData.lastName, this.formData.email, this.formData.password)
         .subscribe({
           next: () => console.log("Registered successfully")
         });

@@ -3,7 +3,9 @@
 export interface CommentDto {
   authorId?: number;
   content?: string;
+  firstName?: string;
+  lastName?: string;
   created?: string;
-  id?: number;
+  commentId?: number;
   postId?: number;
 }

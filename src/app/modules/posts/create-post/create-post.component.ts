@@ -74,6 +74,7 @@ export class CreatePostComponent {
           comments: [],
           cookingTime: this.recipeForm.value.time!,
           created: date,
+          category: this.recipeForm.value.categories?.join(','),
           difficulty: difficultyStringToNumberMap.get(this.recipeForm.value.difficulty!),
           ingredients: this.ingredientsList,
           preparationSteps: this.recipeStepsList,
