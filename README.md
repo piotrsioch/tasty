@@ -1,27 +1,15 @@
-# ZeSmakiem
+# Tasty
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
+This project was completed as part of a class assignment during our studies. My collaborator, [@zanrafal](https://github.com/zanrafal), and I divided our responsibilities evenly, with a focus on frontend development in Angular for myself and backend development in Java for Rafal
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Project Overview
+The project is a platform designed for sharing food recipes, essentially functioning as a food blog. It encompasses several key features, including:
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Browsing blog posts
+- Sharing recipes and posts
+- Adding posts to favorites
+- Viewing favorite posts
+- Commenting on posts
+- Viewing user profiles
+- Editing user profiles
